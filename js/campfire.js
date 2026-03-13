@@ -1,23 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
+const frames = [
 
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JBenavente</title>
-</head>
+`   ( )
+  (   )
+   ) (
+    |
+   /_\\
+  /___\\`,
 
-<body>
-    <h1>Hola, esta es mi página web</h1>
-    <h2>Que tal estas</h2>
-    <p>La he publicado con GitHub Pages.</p>
+`   ) (
+  (   )
+   ( )
+    |
+   /_\\
+  /___\\`,
 
-    <pre id="campfire"></pre>
-    <pre id="ascii-face" class="ascii-face"></pre>
-    
-    <pre id="perrete">
-                                                                               .. ..........  ..... .                           .                       
+`  (   )
+   ) (
+  (   )
+    |
+   /_\\
+  /___\\`
+
+];
+
+const fire = document.getElementById("campfire");
+
+let i = 0;
+
+setInterval(() => {
+    fire.textContent = frames[i];
+    i = (i + 1) % frames.length;
+}, 200);
+
+
+const asciiArt = `
+                                                                       .. ..........  ..... .                           .                       
          .....                                                   ..--.................  ..........-.---........ .. ........----................ 
                          .                                   ...   ................ ....... ............-++++-..-.....  ....................... 
                          .. ....                   ..... ..       .     . ........ ... .. .... ..  ....-..........  ............ .............. 
@@ -107,9 +124,20 @@
  --.....+##---.....+#+..--..-+++..-+++++---++--##################++++--#+..##+-.----++++++..-.-++---......                               ..     
  -++--....+#+++-.. .-+-..-++-. . ....-+----+-.-+------+########-##-+#----..+---++--++--+-+-..-..++++..                                     .    
                                      ....---..+-.-+++++#++-.........-.......................  ..                                                
-    </pre>
-    
-    <script src="js/campfire.js"></script>
-</body>
+`;
 
-</html>
+const container = document.getElementById("ascii-face");
+
+let j = 0;
+function typeEffect() {
+
+    if (j < asciiArt.length) {
+
+        container.textContent += asciiArt[j];
+        j++;
+
+
+    }
+}
+
+typeEffect();

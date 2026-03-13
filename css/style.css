@@ -1,0 +1,21 @@
+body{
+    background:#111;
+    color:white;
+    font-family: sans-serif;
+}
+
+#campfire{
+    white-space: pre;
+    font-size:20px;
+    color:orange;
+    text-shadow:0 0 8px rgba(255,150,0,0.7);
+}
+
+.ascii-face{
+    font-family: Consolas, monospace;
+    white-space: pre;
+    color:#2b6cb0;
+    font-size:12px;
+    line-height:1.05;
+    text-align:center;
+}
